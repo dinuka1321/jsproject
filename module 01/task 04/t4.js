@@ -1,14 +1,18 @@
-let a = parseInt(prompt("Enter the first integer:"));
-let b = parseInt(prompt("Enter the second integer:"));
-let c = parseInt(prompt("Enter the third integer:"));
+let name = prompt("Enter your name:");
 
+let randomNumber = Math.floor(Math.random() * 4) + 1;
 
-let sum = a + b + c;
-let product = a * b * c;
-let average = sum / 3;
+let house;
 
+if (randomNumber === 1) {
+    house = "Gryffindor";
+} else if (randomNumber === 2) {
+    house = "Slytherin";
+} else if (randomNumber === 3) {
+    house = "Hufflepuff";
+} else {
+    house = "Ravenclaw";
+}
 
 document.getElementById("result").innerHTML =
-    "Sum: " + sum + "<br>" +
-    "Product: " + product + "<br>" +
-    "Average: " + average;
+    name + ", you are " + house + ".";
